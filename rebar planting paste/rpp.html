@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="rpp.css">
+    <title>Rebar Planting Paste</title>
+</head>
+<body>
+    <section>
+        <form class="d-flex justify-content-center" id="form" onsubmit="return false">
+            <div class="form-row">
+                <div class="form-group col-md-2 w-100">
+                    <label for="mil-num">شماره میلگرد</label>
+                    <input step="0.01" type="number" class="form-control" id="mil-num" min=0 placeholder="بر حسب میلی متر (mm)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <label for="hole-d">قطر حفره</label>
+                    <input step="0.01" type="number" class="form-control" id="hole-d" min=0 placeholder="بر حسب میلی متر (mm)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <label for="hole-h">ارتفاع حفره</label>
+                    <input step="0.01" type="number" class="form-control" id="hole-h" min=0 placeholder="بر حسب سانتی متر (cm)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <button type="button" class="btn btn-primary w-100 mt-2" min=0 id="cal-btn">محاسبه مقدار خمیر...</button>
+                </div>
+                <button type="button" disabled class="btn btn-secondary mt-2 w-100" id="result-btn">
+                    شما به <span class="badge badge-light fs-5" id="result">0000</span>
+                    <span class="sr-only">گرم خمیر کاشت میلگرد نیاز دارید.</span>
+                </button>
+                <span class="alert alert-info d-block mt-2" id="result-btn2">برای این مقدار پودر حدودا به 
+                    <span class="badge badge-light fs-5 text-dark" id="result2">0000</span>
+                    بسته نیاز دارید.
+                </span>
+            </div>
+        </form>
+    </section>
+    <script src="rpp.js"></script>
+</body>
+</html>
