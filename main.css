@@ -34,3 +34,7 @@ body {
     background-color: #EE2F24 !important;
     opacity: 1;
 }
+#result-btn-pack
+{
+    visibility: hidden;
+}

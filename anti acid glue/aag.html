@@ -12,18 +12,35 @@
         <form class="d-flex justify-content-right" id="form" onsubmit="return false">
             <div class="form-row">
                 <div class="form-group col-md-2 w-100">
-                    <label for="glue-surface">مساحت</label>
-                    <input step="0.01" type="number" class="form-control" id="glue-surface" min=0 placeholder="برحسب متر مربع (m2)">
+                    <label for="band-length">طول کاشی</label>
+                    <input step="0.01" type="number" class="form-control" id="band-length" min=0 placeholder="بر حسب سانتی متر (cm)">
                 </div>
                 <div class="form-group col-md-2 w-100">
-                    <button type="button" class="btn btn-primary w-100 mt-2" min=0 id="cal-btn">محاسبه مقدار چسب...</button>
+                    <label for="band-width">عرض کاشی</label>
+                    <input step="0.01" type="number" class="form-control" id="band-width" min=0 placeholder="بر حسب سانتی متر (cm)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <label for="band-height">عمق بند</label>
+                    <input step="0.01" type="number" class="form-control" id="band-height" min=0 placeholder="بر حسب میلی متر (mm)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <label for="band-w-width">عرض بند</label>
+                    <input step="0.01" type="number" class="form-control" id="band-w-width" min=0 placeholder="بر حسب میلی متر (mm)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <label for="metraj">متراژ</label>
+                    <input step="0.01" type="number" class="form-control" id="metraj" min=0 placeholder="بر حسب متر مربع (m2)">
+                </div>
+                <div class="form-group col-md-2 w-100">
+                    <button type="button" class="btn btn-primary w-100 mt-2" min=0 id="cal-btn">محاسبه مقدار پودر...</button>
                 </div>
                 <button type="button" disabled class="btn btn-secondary mt-2 w-100" id="result-btn">
                     شما به <span class="badge badge-light fs-5" id="result">0000</span>
-                    <span class="sr-only">کیلوگرم چسب به همراه
-                        <span class="badge badge-light fs-5" id="result2">0000</span> مکمل برای این سطح نیاز دارید.</span>
+                    <span class="sr-only">کیلوگرم پودر همراه 
+                        <span class="badge badge-light fs-5" id="result2">0000</span>لیتر مکمل
+                         نیاز دارید.</span>
                 </button>
-                <span class="alert alert-secondary d-block mt-2" id="result-btn2">برای این مقدار چسب حدودا به 
+                <span class="alert alert-secondary d-block mt-2" id="result-btn2">برای این مقدار پودر حدودا به 
                     <span class="badge badge-light fs-5 text-dark" id="result3">0000</span>
                     پک نیاز دارید.
                 </span>

@@ -38,13 +38,24 @@ btn1.addEventListener("click", (e)=>{
 
 })
 btn2.addEventListener("click", (e)=>{
-    let length = (+$.getElementById('grout-length').value)/10;
-    let width = (+$.getElementById('grout-width').value)/10;
-    let height = (+$.getElementById('grout-height').value)/10;
-    const density = 1.4;
-    var result = length*width*height*density;
+    let length = (+$.getElementById("band-length").value)*10;
+    let width = (+$.getElementById("band-width").value)*10;
+    let height = +$.getElementById("band-height").value;
+    let bandWidth = +$.getElementById("band-w-width").value;
+    let metraj = +$.getElementById("metraj").value;
+
+
+    const density = 1.53;
+    var result = ((length + width) / (length*width))*density*height*bandWidth;
+    var resultKol = result*metraj;
     var showSpan = $.getElementById("result3");
     showSpan.innerHTML = result.toFixed(3);
     showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
+    var showSpan2 = $.getElementById("result4");
+    showSpan2.innerHTML = resultKol.toFixed(3);
+    showSpan2.innerHTML = showSpan2.innerHTML.replace(".", "/");
+    var showSpan3 = $.getElementById("result5");
+    showSpan3.innerHTML = Math.ceil(resultKol/4);
+    $.getElementById("result-btn-pack").style.visibility = "visible";
     $.getElementById("result-btn-e").style.visibility = "visible";
 })

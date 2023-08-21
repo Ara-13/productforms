@@ -13,15 +13,25 @@ for(let i=0; i<inputs.length; i++){
 
 var btn = $.getElementById("cal-btn");
 btn.addEventListener("click", (e)=>{
-    let surface = (+$.getElementById('glue-surface').value);
-    var result = surface*5;
+    let length = (+$.getElementById("band-length").value)*10;
+    let width = (+$.getElementById("band-width").value)*10;
+    let height = +$.getElementById("band-height").value;
+    let bandWidth = +$.getElementById("band-w-width").value;
+    let metraj = +$.getElementById("metraj").value;
+
+
+    const density = 1.53;
+    var result = ((length + width) / (length*width))*density*height*bandWidth;
+    var resultKol = result*metraj;
     var showSpan = $.getElementById("result");
-    showSpan.innerHTML = result.toFixed(3);
+    showSpan.innerHTML = resultKol.toFixed(3);
     showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
     var showSpan2 = $.getElementById("result2");
-    showSpan2.innerHTML = Math.ceil(result/4);
+    showSpan2.innerHTML = Math.ceil(resultKol/4);
     var showSpan3 = $.getElementById("result3");
-    showSpan3.innerHTML = Math.ceil(result/4);
+    showSpan3.innerHTML = Math.ceil(resultKol/4);
+    $.getElementById("result-btn2").style.visibility = "visible";
+    $.getElementById("result-btn").style.visibility = "visible";
     $.getElementById("result-btn2").style.visibility = "visible";
     $.getElementById("result-btn").style.visibility = "visible";
 
