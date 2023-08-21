@@ -14,9 +14,10 @@ for(let i=0; i<inputs.length; i++){
 var btn = $.getElementById("cal-btn");
 btn.addEventListener("click", (e)=>{
     let surface = (+$.getElementById('primer-surface').value);
-    var result = surface*8;
+    var result = surface/8;
     var showSpan = $.getElementById("result");
     showSpan.innerHTML = result.toFixed(3);
+    console.log(showSpan.innerHTML)
     // var showSpan2 = $.getElementById("result2");
     // showSpan2.innerHTML = Math.ceil(result/20)
     // $.getElementById("result-btn2").style.visibility = "visible";
