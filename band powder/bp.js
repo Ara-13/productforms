@@ -20,7 +20,7 @@ btn.addEventListener("click", (e)=>{
     let metraj = +$.getElementById("metraj").value;
 
 
-    const density = 1.56;
+    const density = 1.53;
     var result = ((length + width) / (length*width))*density*height*bandWidth;
     var resultKol = result*metraj
     var showSpan = $.getElementById("result");

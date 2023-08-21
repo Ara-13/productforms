@@ -14,16 +14,9 @@ for(let i=0; i<inputs.length; i++){
 var btn = $.getElementById("cal-btn");
 btn.addEventListener("click", (e)=>{
     let surface = (+$.getElementById('sealing-surface').value);
-    var result = surface*3;
-    var showSpan = $.getElementById("result-powder");
-    showSpan.innerHTML = result.toFixed(3);
-
-    var showSpan2 = $.getElementById("result-mokamel");
-    showSpan2.innerHTML = (Math.round(result/15))*4;
-
+    var result = surface/6;
     var showSpan3 = $.getElementById("result2");
-    showSpan3.innerHTML = Math.ceil(result/15);
+    showSpan3.innerHTML = Math.ceil(result);
     $.getElementById("result-btn2").style.visibility = "visible";
-    $.getElementById("result-btn").style.visibility = "visible";
 
 })
