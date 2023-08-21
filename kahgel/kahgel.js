@@ -17,6 +17,7 @@ btn.addEventListener("click", (e)=>{
     var result = surface*2;
     var showSpan = $.getElementById("result");
     showSpan.innerHTML = result.toFixed(3);
+    showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
     var showSpan2 = $.getElementById("result2");
     showSpan2.innerHTML = Math.ceil(result/15)
     $.getElementById("result-btn2").style.visibility = "visible";

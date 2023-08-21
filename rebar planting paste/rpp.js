@@ -25,6 +25,7 @@ btn.addEventListener("click", (e)=>{
     var result = holeM - milM;
     var showSpan = $.getElementById("result");
     showSpan.innerHTML = Math.floor(result*1000);
+    showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
     //var showSpan2 = $.getElementById("result2");
     //showSpan2.innerHTML = Math.ceil(result/15)
     //$.getElementById("result-btn2").style.visibility = "visible";

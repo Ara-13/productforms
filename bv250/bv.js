@@ -28,6 +28,7 @@ btn.addEventListener("click", (e)=>{
     var result = metraj*material;
     var showSpan = $.getElementById("result");
     showSpan.innerHTML = result.toFixed(3);
+    showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
     $.getElementById("result-btn").style.visibility = "visible";
 
 })

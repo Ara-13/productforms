@@ -25,6 +25,7 @@ btn.addEventListener("click", (e)=>{
     var resultKol = result*metraj
     var showSpan = $.getElementById("result");
     showSpan.innerHTML = result.toFixed(3);
+    showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
     var showSpan2 = $.getElementById("result2");
     showSpan2.innerHTML = resultKol.toFixed(3)
     var showSpan3 = $.getElementById("result3");
