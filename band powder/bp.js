@@ -17,14 +17,19 @@ btn.addEventListener("click", (e)=>{
     let width = (+$.getElementById("band-width").value)*10;
     let height = +$.getElementById("band-height").value;
     let bandWidth = +$.getElementById("band-w-width").value;
+    let metraj = +$.getElementById("metraj").value;
+
 
     const density = 1.56;
     var result = ((length + width) / (length*width))*density*height*bandWidth;
+    var resultKol = result*metraj
     var showSpan = $.getElementById("result");
     showSpan.innerHTML = result.toFixed(3);
-    //var showSpan2 = $.getElementById("result2");
-    //showSpan2.innerHTML = Math.ceil(result/15)
-    //$.getElementById("result-btn2").style.visibility = "visible";
+    var showSpan2 = $.getElementById("result2");
+    showSpan2.innerHTML = resultKol.toFixed(3)
+    var showSpan3 = $.getElementById("result3");
+    showSpan3.innerHTML = Math.ceil(resultKol/4);
+    $.getElementById("result-btn2").style.visibility = "visible";
     $.getElementById("result-btn").style.visibility = "visible";
 
 })
