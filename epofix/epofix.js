@@ -32,8 +32,8 @@ btn1.addEventListener("click", (e)=>{
     showSpan.innerHTML = result.toFixed(3);
     showSpan.innerHTML = showSpan.innerHTML.replace(".", "/");
     var showSpan2 = $.getElementById("result2");
-    showSpan2.innerHTML = Math.ceil(result/20)
-    $.getElementById("result-btn2").style.visibility = "visible";
+    //showSpan2.innerHTML = Math.ceil(result/20)
+    //$.getElementById("result-btn2").style.visibility = "visible";
     $.getElementById("result-btn").style.visibility = "visible";
 
 })
